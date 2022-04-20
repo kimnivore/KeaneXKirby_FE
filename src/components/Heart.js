@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Whiteheart from '../assets/white-heart.png';
 import Pinkheart from '../assets/pink-heart.png';
+import Blackheart from '../assets/black-heart.png';
 
 
 export default function Heart(props) {
@@ -12,7 +13,7 @@ export default function Heart(props) {
     }, [isLoading])
 
     const renderHeart = () => {
-        return isLoading ? Whiteheart : Pinkheart
+        return isLoading ? Blackheart : Pinkheart
     }
 
     const renderAnimations = () => {

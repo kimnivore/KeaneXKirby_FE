@@ -5,7 +5,6 @@ import { ethers } from 'ethers';
 import KeanesNFT from  './utils/KeanseNFT.json'
 import Heart from './components/Heart';
 
-// Constants
 const TWITTER_HANDLE = 'kimnivore';
 const TWITTER_LINK = `https://twitter.com/${TWITTER_HANDLE}`;
 const OPENSEA_LINK = 'https://testnets.opensea.io/collection/keanexkirby-boae5bk4kt';
