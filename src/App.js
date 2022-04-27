@@ -158,17 +158,17 @@ const App = () => {
     <div className="App">
       <div className="container">
         <div className="header-container">
-          <div className="header">
-          <Heart isLoading={isLoading} isClick={isClick} onClick={() => setClick(!isClick)} />
-          <p className="header gradient-text">Keane x Kirby Collection</p>
-          <Heart isLoading={isLoading} isClick={isClick} onClick={() => setClick(!isClick)} />
-          </div>
+          {/* <div className="header"> */}
+            
+            <p className="header gradient-text"><Heart isLoading={isLoading} isClick={isClick} onClick={() => setClick(!isClick)} />Keane x Kirby Collection <Heart isLoading={isLoading} isClick={isClick} onClick={() => setClick(!isClick)} /></p>
+           
+          {/* </div> */}
           
           <p className="sub-text">Collect a rare Kirby-Word NFT</p>
           
           { currentAccount === "" ? renderNotConnectedContainer() : renderMintUI() }
 
-          <Hearts isLoading={isLoading} isClick={isClick} onClick={() => setClick(!isClick)} />
+          <Hearts isLoading={isLoading}  />
           <div className="header gradient-text">{nftCount} / {TOTAL_MINT_COUNT} Minted</div>
         </div>
 
