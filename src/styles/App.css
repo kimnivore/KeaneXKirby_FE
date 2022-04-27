@@ -1,3 +1,5 @@
+@import '~antd/dist/antd.css';
+
 .App {
   height: 100vh;
   background-color: #0d1116;
@@ -39,6 +41,9 @@
   margin: 20px;
   font-size: 50px;
   font-weight: bold;
+  width: auto;
+  display: flex;
+  justify-content: center;
 }
 
 .sub-text {

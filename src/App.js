@@ -5,7 +5,7 @@ import React, { useEffect, useState } from "react";
 import { ethers } from 'ethers';
 import KeanesNFT from  './utils/KeanseNFT.json'
 import Hearts from './components/Heart';
-import { Button, message} from 'antd';
+import { Button, notification, Popover } from 'antd';
 import Heart from 'react-animated-heart';
 
 const TWITTER_HANDLE = 'kimnivore';
@@ -82,7 +82,6 @@ const App = () => {
         connectedContract.on("NewEpicNFTMinted", (from, tokenId) => {
           console.log(from, tokenId.toNumber())
           console.log(`Hey there! We've minted your NFT and sent it to your wallet. Here's the link: http://testnets.opensea.io/assets/${CONTRACT_ADDRESS}/${tokenId.toNumber()}`)
-          message.success('Success!');
         });
         console.log('Setup event listener')
       } else {
@@ -104,18 +103,28 @@ const App = () => {
         console.log('Popping wallet to pay gas...');
         let nftTxn = await connectedContract.makeAnEpicNFT();
         setIsLoading(true)
-        alert('Mining...please wait.');
+        console.log('Mining...please wait.');
         await nftTxn.wait();
         setIsLoading(false)
         console.log(nftTxn);
         console.log(`Mined, see transaction: https://rinkeby.etherscan.io/tx/${nftTxn.hash}`);
-      
+        openNotification()
       } else {
         console.log("Ethereum object doesn't exist!");
       }
     } catch (error) {
       console.log(error)
     }
+  }
+
+  const openNotification = () => {
+    notification.open({ 
+      message: 'Success!',
+      description: `We've minted your NFT and sent it to your wallet. Click the link below to view on OpenSea`,
+      onClick: () => {
+        console.log('Notification clicked');
+      }
+    })
   }
 
   useEffect(() => {
@@ -128,16 +137,19 @@ const App = () => {
 
   // Render Methods
   const renderNotConnectedContainer = () => (
+    <Popover content="Connect to your MetaMask wallet">
       <Button onClick={connectWallet} className="cta-button connect-wallet-button">
         Connect to Wallet
       </Button>
- 
+    </Popover>
   );
 
   const renderMintUI = () => (
+    <Popover content="Click to mint">
       <Button onClick={askContractToMintNft} className="cta-button connect-wallet-button">
         Mint NFT
       </Button>
+    </Popover>
   
   )
 
@@ -146,17 +158,17 @@ const App = () => {
     <div className="App">
       <div className="container">
         <div className="header-container">
-          <p className="header gradient-text">
-            <Heart isLoading={isLoading} isClick={isClick} onClick={() => setClick(!isClick)} />
-            Keane x Kirby Collection
-            <Heart isLoading={isLoading} isClick={isClick} onClick={() => setClick(!isClick)} />
-          </p>
+          <div className="header">
+          <Heart isLoading={isLoading} isClick={isClick} onClick={() => setClick(!isClick)} />
+          <p className="header gradient-text">Keane x Kirby Collection</p>
+          <Heart isLoading={isLoading} isClick={isClick} onClick={() => setClick(!isClick)} />
+          </div>
           
           <p className="sub-text">Collect a rare Kirby-Word NFT</p>
           
           { currentAccount === "" ? renderNotConnectedContainer() : renderMintUI() }
 
-          <Hearts isLoading={isLoading} />
+          <Hearts isLoading={isLoading} isClick={isClick} onClick={() => setClick(!isClick)} />
           <div className="header gradient-text">{nftCount} / {TOTAL_MINT_COUNT} Minted</div>
         </div>
 
