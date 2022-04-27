@@ -145,7 +145,7 @@ const App = () => {
   );
 
   const renderMintUI = () => (
-    <Popover content="Click to mint">
+    <Popover content="Click to mint a special Kirby-word NFT">
       <Button onClick={askContractToMintNft} className="cta-button connect-wallet-button">
         Mint NFT
       </Button>
