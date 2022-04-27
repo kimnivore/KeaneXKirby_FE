@@ -1,16 +1,17 @@
 import React, { useState, useEffect } from 'react';
-import Whiteheart from '../assets/white-heart.png';
 import Pinkheart from '../assets/pink-heart.png';
 import Blackheart from '../assets/black-heart.png';
+import '../styles/App.css';
+import Heart from 'react-animated-heart';
 
-
-export default function Heart(props) {
-    const [animation, setAnimation] = useState(0)
-    const isLoading = props.isLoading
+export default function Hearts(props) {
+    const [animation, setAnimation] = useState(0);
+    const isLoading = props.isLoading;
+    const [isClick, setClick] = useState(false);
 
     useEffect(() => {
-        renderAnimations()
-    }, [isLoading])
+        renderAnimations() 
+    }, [isLoading]) 
 
     const renderHeart = () => {
         return isLoading ? Blackheart : Pinkheart
@@ -21,11 +22,13 @@ export default function Heart(props) {
     }
 
     return (
-        <img
-        className='heart'
-        isLoading={isLoading}
-        src={renderHeart()}
-        animation={animation}
-        alt="heart"/>
+        <>
+            <img
+            className='heart'
+            isLoading={isLoading}
+            src={renderHeart()}
+            animation={animation}
+            alt="heart"/>
+        </>
     )
 }
