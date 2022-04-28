@@ -35,7 +35,12 @@
   flex-direction: column;
   padding: 30px;
 }
-
+ .click {
+   display: flex;
+   justify-content: center;
+   justify-self: center;
+  border: 1px solid white;
+}
 .header {
   margin: 20px;
   font-size: 3.5rem;

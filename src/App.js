@@ -6,7 +6,7 @@ import { ethers } from 'ethers';
 import KeanesNFT from  './utils/KeanseNFT.json'
 import Hearts from './components/Heart';
 import { Button, notification, Popover } from 'antd';
-import Heart from 'react-animated-heart';
+// import Heart from 'react-animated-heart';
 
 const TWITTER_HANDLE = 'kimnivore';
 const TWITTER_LINK = `https://twitter.com/${TWITTER_HANDLE}`;
@@ -20,7 +20,7 @@ const App = () => {
   const [currentAccount, setCurrentAccount] = useState('');
   const [nftCount, setNftCount] = useState('');
   const [isLoading, setIsLoading] = useState(false);
-  const [isClick, setClick] = useState(false);
+  // const [isClick, setClick] = useState(false);
 
   
   const getNftCount = async () => {
@@ -158,26 +158,13 @@ const App = () => {
     <div className="App">
       <div className="container">
         <div className="header-container">
-          {/* <div className="header"> */}
-            
-            <div className="header gradient-text">
-                <Heart isLoading={isLoading} isClick={isClick} onClick={() => setClick(!isClick)} />
-                <p className="header gradient-text">Keane x Kirby Collection </p>
-                <Heart isLoading={isLoading} isClick={isClick} onClick={() => setClick(!isClick)} />
-              </div>
-           
-          {/* </div> */}
-          
+          <h1 className="header gradient-text">Keane x Kirby Collection </h1>
           <p className="sub-text">Collect a rare Kirby-Word NFT</p>
-          
+          {/* <Heart className="click" isClick={isClick} onClick={() => setClick(!isClick)} /> */}
           { currentAccount === "" ? renderNotConnectedContainer() : renderMintUI() }
-
           <Hearts isLoading={isLoading}  />
           <div className="header gradient-text">{nftCount} / {TOTAL_MINT_COUNT} Minted</div>
         </div>
-
-     
-
         <div className="footer-container">
           <img alt="OpenSea Logo" className="opensea-logo" src={openseaLogo} />
           <a
