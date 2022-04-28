@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from "react";
+import { Route, Link, Switch } from 'react-router-dom';
 import { ethers } from 'ethers';
 import KeanesNFT from  './utils/KeanseNFT.json'
 import Hearts from './components/Heart';
 import Footer from './components/Footer';
-// import Kirbies from './components/Kirbies';
+import Gallery from './components/Gallery';
 import './styles/App.css';
 import { Button, notification, Popover } from 'antd';
 const TOTAL_MINT_COUNT = 100;
@@ -148,9 +149,18 @@ const App = () => {
   
   return (
     <div className="App">
+      <div className="Nav">
+        <Link className="navlink" to="/">Home</Link>
+        <Link className="navlink" to="/kirbies">Kirby Gallery</Link>
+      </div>
+      <Switch>
+        <Route path='/kirbies' component={Gallery} />
+        <Route exact path='/' />
+      </Switch>
+
       <div className="container">
         <div className="header-container">
-          <h1 className="header gradient-text">Keane x Kirby Collection </h1>
+          <h1 className="header gradient-text">Keane x Kirby</h1>
           <p className="sub-text">Collect a rare Kirby-Word NFT</p>
           { currentAccount === "" ? renderNotConnectedContainer() : renderMintUI() }
           <Hearts isLoading={isLoading}  />
