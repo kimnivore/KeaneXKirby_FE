@@ -2,28 +2,18 @@ import React, { useEffect, useState } from "react";
 import { ethers } from 'ethers';
 import KeanesNFT from  './utils/KeanseNFT.json'
 import Hearts from './components/Heart';
-import { Button, notification, Popover } from 'antd';
+import Footer from './components/Footer';
+// import Kirbies from './components/Kirbies';
 import './styles/App.css';
-import twitterLogo from './assets/twitter-logo.svg';
-import openseaLogo from './assets/opensea-logo.svg';
-import { bounce } from 'react-animations';
-import styled, { keyframes } from 'styled-components';
-// import Heart from 'react-animated-heart';
-
-const TWITTER_HANDLE = 'kimnivore';
-const TWITTER_LINK = `https://twitter.com/${TWITTER_HANDLE}`;
-const OPENSEA_LINK = 'https://testnets.opensea.io/collection/keanexkirby-boae5bk4kt';
+import { Button, notification, Popover } from 'antd';
 const TOTAL_MINT_COUNT = 100;
 const CONTRACT_ADDRESS = '0x2ea8f9eacD5eF9211Abd58E54E483774F845BdDE';
 
-const Bounce = styled.div`animation: 2s ${keyframes`${bounce}`} infinite`; 
 
 const App = () => {
   const [currentAccount, setCurrentAccount] = useState('');
   const [nftCount, setNftCount] = useState('');
   const [isLoading, setIsLoading] = useState(false);
-  // const [isClick, setClick] = useState(false);
-
   
   const getNftCount = async () => {
     const { ethereum } = window;
@@ -159,33 +149,14 @@ const App = () => {
   return (
     <div className="App">
       <div className="container">
-
         <div className="header-container">
           <h1 className="header gradient-text">Keane x Kirby Collection </h1>
           <p className="sub-text">Collect a rare Kirby-Word NFT</p>
-          {/* <Heart className="click" isClick={isClick} onClick={() => setClick(!isClick)} /> */}
           { currentAccount === "" ? renderNotConnectedContainer() : renderMintUI() }
-          <Bounce><Hearts isLoading={isLoading}  /></Bounce>
+          <Hearts isLoading={isLoading}  />
           <h2 className="header gradient-text">{nftCount} / {TOTAL_MINT_COUNT} Minted</h2>
         </div>
-
-        <div className="footer-container">
-          <img alt="OpenSea Logo" className="opensea-logo" src={openseaLogo} />
-          <a
-            className="footer-text"
-            href={OPENSEA_LINK}
-            target="_blank"
-            rel="noreferrer"
-            >{`View on OpenSea`}</a>
-          <img alt="Twitter Logo" className="twitter-logo" src={twitterLogo} />
-          <a
-            className="footer-text"
-            href={TWITTER_LINK}
-            target="_blank"
-            rel="noreferrer"
-            >{`Created by @${TWITTER_HANDLE}`}</a>
-        </div>
-
+        <Footer />
       </div>
     </div>
   );

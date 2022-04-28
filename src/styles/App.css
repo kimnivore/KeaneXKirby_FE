@@ -60,21 +60,6 @@
   animation: gradient-animation 4s ease infinite;
 }
 
-/* .mint-button {
-  background: -webkit-linear-gradient(left, #a200d6, #ff6fdf);
-  background-size: 200% 200%;
-  animation: gradient-animation 4s ease infinite;
-} */
-
-/* .opensea-button {
-  background-color: rgb(32, 129, 226);
-} */
-
-/* .mint-count {
-  color: white;
-  font-size: 1rem;
-  font-weight: bold;
-} */
 
 .footer-container {
   display: flex;
