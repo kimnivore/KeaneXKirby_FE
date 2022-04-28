@@ -1,22 +1,20 @@
-import './styles/App.css';
-import twitterLogo from './assets/twitter-logo.svg';
-import openseaLogo from './assets/opensea-logo.svg';
 import React, { useEffect, useState } from "react";
 import { ethers } from 'ethers';
 import KeanesNFT from  './utils/KeanseNFT.json'
 import Hearts from './components/Heart';
 import { Button, notification, Popover } from 'antd';
+import './styles/App.css';
+import twitterLogo from './assets/twitter-logo.svg';
+import openseaLogo from './assets/opensea-logo.svg';
 // import Heart from 'react-animated-heart';
 
 const TWITTER_HANDLE = 'kimnivore';
 const TWITTER_LINK = `https://twitter.com/${TWITTER_HANDLE}`;
 const OPENSEA_LINK = 'https://testnets.opensea.io/collection/keanexkirby-boae5bk4kt';
 const TOTAL_MINT_COUNT = 100;
-
 const CONTRACT_ADDRESS = '0x2ea8f9eacD5eF9211Abd58E54E483774F845BdDE';
 
 const App = () => {
-
   const [currentAccount, setCurrentAccount] = useState('');
   const [nftCount, setNftCount] = useState('');
   const [isLoading, setIsLoading] = useState(false);
@@ -158,7 +156,7 @@ const App = () => {
     <div className="App">
       <div className="container">
         <div className="header-container">
-          <h1 className="header gradient-text">Keane x Kirby Collection </h1>
+          <p className="header gradient-text">Keane x Kirby Collection </p>
           <p className="sub-text">Collect a rare Kirby-Word NFT</p>
           {/* <Heart className="click" isClick={isClick} onClick={() => setClick(!isClick)} /> */}
           { currentAccount === "" ? renderNotConnectedContainer() : renderMintUI() }
