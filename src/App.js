@@ -160,7 +160,11 @@ const App = () => {
         <div className="header-container">
           {/* <div className="header"> */}
             
-            <p className="header gradient-text"><Heart isLoading={isLoading} isClick={isClick} onClick={() => setClick(!isClick)} />Keane x Kirby Collection <Heart isLoading={isLoading} isClick={isClick} onClick={() => setClick(!isClick)} /></p>
+            <div className="header gradient-text">
+                <Heart isLoading={isLoading} isClick={isClick} onClick={() => setClick(!isClick)} />
+                <p className="header gradient-text">Keane x Kirby Collection </p>
+                <Heart isLoading={isLoading} isClick={isClick} onClick={() => setClick(!isClick)} />
+              </div>
            
           {/* </div> */}
           
