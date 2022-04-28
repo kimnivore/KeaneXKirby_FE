@@ -5,21 +5,6 @@
   background-color: #0d1116;
   overflow: scroll;
   text-align: center;
-
-}
-.heart {
-  padding: 10px;
-  margin: auto;
-  max-height: 20vh;
-  max-width: 10vh;
-}
-
-.heart[animation="0"] {
-  animation: pulsate-bck 0.8s ease-in-out infinite both;
-}
-
-.heart[animation="1"] {
-  animation: jello-horizontal 0.9s both;
 }
 
 .container {
@@ -40,9 +25,9 @@
   margin: 20px;
   font-size: 3.5rem;
   font-weight: bold;
-  width: auto;
-  display: flex;
-  justify-content: center;
+  /* width: auto; */
+  /* display: flex;
+  justify-content: center; */
 }
 
 .sub-text {
@@ -69,35 +54,33 @@
   color: white;
 }
 
-.connect-wallet-button {
+.connect-wallet-button, .mint-button {
   background: -webkit-linear-gradient(left, #fae0e4, #ff477e);
   background-size: 200% 200%;
   animation: gradient-animation 4s ease infinite;
 }
 
-.mint-button {
+/* .mint-button {
   background: -webkit-linear-gradient(left, #a200d6, #ff6fdf);
   background-size: 200% 200%;
   animation: gradient-animation 4s ease infinite;
-  margin-right: 15px;
-}
+} */
 
-.opensea-button {
+/* .opensea-button {
   background-color: rgb(32, 129, 226);
-}
+} */
 
-.mint-count {
+/* .mint-count {
   color: white;
   font-size: 1rem;
   font-weight: bold;
-}
+} */
 
 .footer-container {
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 30px;
-
 }
 
 .twitter-logo, .opensea-logo {
@@ -111,31 +94,23 @@
   font-size: 1rem;
   font-weight: bold;
 }
+.heart {
+  padding: 10px;
+  margin: auto;
+  max-height: 20vh;
+  max-width: 10vh;
+}
+
+.heart[animation="0"] {
+  animation: pulsate-bck 0.8s ease-in-out infinite both;
+}
+
+.heart[animation="1"] {
+  animation: jello-horizontal 0.9s both;
+}
 
 /* KeyFrames */
-@keyframes heartbeat {
-  from {
-    transform: scale(1);
-    transform-origin: center center;
-    animation-timing-function: ease-out;
-  }
-  10% {
-    transform: scale(0.5);
-    animation-timing-function: ease-in;
-  }
-  17% {
-    transform: scale(0.9);
-    animation-timing-function: ease-out;
-  }
-  33% {
-    transform: scale(0.5);
-    animation-timing-function: ease-in;
-  }
-  45% {
-    transform: scale(1);
-    animation-timing-function: ease-out;
-  }
-}
+
 @-webkit-keyframes gradient-animation {
   0% {
     background-position: 0% 50%;
@@ -167,6 +142,30 @@
   }
   100% {
     background-position: 0% 50%;
+  }
+}
+
+@keyframes heartbeat {
+  from {
+    transform: scale(1);
+    transform-origin: center center;
+    animation-timing-function: ease-out;
+  }
+  10% {
+    transform: scale(0.5);
+    animation-timing-function: ease-in;
+  }
+  17% {
+    transform: scale(0.9);
+    animation-timing-function: ease-out;
+  }
+  33% {
+    transform: scale(0.5);
+    animation-timing-function: ease-in;
+  }
+  45% {
+    transform: scale(1);
+    animation-timing-function: ease-out;
   }
 }
 
