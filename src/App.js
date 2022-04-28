@@ -6,6 +6,8 @@ import { Button, notification, Popover } from 'antd';
 import './styles/App.css';
 import twitterLogo from './assets/twitter-logo.svg';
 import openseaLogo from './assets/opensea-logo.svg';
+import { bounce } from 'react-animations';
+import styled, { keyframes } from 'styled-components';
 // import Heart from 'react-animated-heart';
 
 const TWITTER_HANDLE = 'kimnivore';
@@ -13,6 +15,8 @@ const TWITTER_LINK = `https://twitter.com/${TWITTER_HANDLE}`;
 const OPENSEA_LINK = 'https://testnets.opensea.io/collection/keanexkirby-boae5bk4kt';
 const TOTAL_MINT_COUNT = 100;
 const CONTRACT_ADDRESS = '0x2ea8f9eacD5eF9211Abd58E54E483774F845BdDE';
+
+const Bounce = styled.div`animation: 2s ${keyframes`${bounce}`} infinite`; 
 
 const App = () => {
   const [currentAccount, setCurrentAccount] = useState('');
@@ -161,7 +165,7 @@ const App = () => {
           <p className="sub-text">Collect a rare Kirby-Word NFT</p>
           {/* <Heart className="click" isClick={isClick} onClick={() => setClick(!isClick)} /> */}
           { currentAccount === "" ? renderNotConnectedContainer() : renderMintUI() }
-          <Hearts isLoading={isLoading}  />
+          <Bounce><Hearts isLoading={isLoading}  /></Bounce>
           <h2 className="header gradient-text">{nftCount} / {TOTAL_MINT_COUNT} Minted</h2>
         </div>
 
