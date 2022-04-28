@@ -36,7 +36,7 @@ const App = () => {
   const checkIfWalletIsConnected = async () => {
     const { ethereum } = window;
     if(!ethereum) {
-      alert('Make sure you have metamask');
+      console.log('Make sure you have metamask');
       return;
     } else {
       console.log('We have the ethereum object', ethereum);
@@ -155,14 +155,16 @@ const App = () => {
   return (
     <div className="App">
       <div className="container">
+
         <div className="header-container">
-          <p className="header gradient-text">Keane x Kirby Collection </p>
+          <h1 className="header gradient-text">Keane x Kirby Collection </h1>
           <p className="sub-text">Collect a rare Kirby-Word NFT</p>
           {/* <Heart className="click" isClick={isClick} onClick={() => setClick(!isClick)} /> */}
           { currentAccount === "" ? renderNotConnectedContainer() : renderMintUI() }
           <Hearts isLoading={isLoading}  />
-          <div className="header gradient-text">{nftCount} / {TOTAL_MINT_COUNT} Minted</div>
+          <h2 className="header gradient-text">{nftCount} / {TOTAL_MINT_COUNT} Minted</h2>
         </div>
+
         <div className="footer-container">
           <img alt="OpenSea Logo" className="opensea-logo" src={openseaLogo} />
           <a
@@ -179,6 +181,7 @@ const App = () => {
             rel="noreferrer"
             >{`Created by @${TWITTER_HANDLE}`}</a>
         </div>
+
       </div>
     </div>
   );
