@@ -1,5 +1,6 @@
 @import '~antd/dist/antd.css';
 
+
 /* App.js */
 .App {
   height: 100vh;
@@ -23,7 +24,7 @@
 }
 
 .header {
-  margin: 20px;
+  /* margin: 20px; */
   font-size: 2.5rem;
   font-weight: bold;
 }
@@ -31,7 +32,7 @@
 .sub-text {
   font-size: 1.56rem;
   color: white;
-  margin: auto;
+  margin: 20px auto;
 }
 
 .gradient-text {
@@ -44,7 +45,7 @@
 .cta-button {
   height: 45px;
   border: 0;
-  margin: 30px auto;
+  margin: 20px auto;
   padding: 0 30px;
   border-radius: 5px;
   cursor: pointer;
@@ -59,12 +60,12 @@
   animation: gradient-animation 4s ease infinite;
 }
 
+/* Banner.js */
 .title {
   display: flex;
   align-items: center;
   margin: 50px;
   width: 90%;
-
 }
 
 .keane-art {
@@ -80,9 +81,17 @@
 }
 
 /* Navbar.js */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 20px;
+  border-bottom: 1px solid #fae0e4;
+}
 .Nav {
   display: flex;
   justify-content: flex-end;
+  /* background-image: linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.5)), url('../assets/kirby-30th-wallpaper.png'); */
+  background-size: 900px;
 }
 
 .navlink{
@@ -222,7 +231,8 @@
 /* Responsive Design */
 @media (max-width: 768px) {
   .header {
-    font-size: 3rem;
+    font-size: 2rem;
+    margin: 10px;
   }
   .sub-text {
     font-size: 1.5rem;
@@ -235,11 +245,28 @@
   }
 }
 
-@media (max-width: 468px) {
+@media (max-width: 390px) {
   .header {
-    font-size: 1.3rem;
+    font-size: 1rem;
+    margin: 10px;
   }
+
   .sub-text {
     font-size: 1rem;
+  }
+  .title {
+    width: auto;
+    margin: 0;
+  }
+  .keane-art {
+    width: 30%;
+    height: auto;
+    display: flex;
+    margin: 20px;
+  }
+  
+  .kirby-16bit {
+    width: 80%;
+    height: auto;  
   }
 }

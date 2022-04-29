@@ -26,7 +26,7 @@ export default function Gallery() {
                                         src={require('../assets/' + item.image + '.png')}
                                         alt={item.title}/>}
                                     >
-                                    <Meta title={item.title} description={item.description}/>
+                                    <Meta title={item.title} description={item.description} />
                             </Card>
                         </Fade>  
                     </div>

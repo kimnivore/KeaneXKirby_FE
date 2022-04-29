@@ -4,7 +4,6 @@ import { ethers } from 'ethers';
 import KeanesNFT from  './utils/KeanseNFT.json';
 import NavBar from "./components/NavBar";
 import Banner from './components/Banner';
-import Hearts from './components/Heart';
 import Footer from './components/Footer';
 import Gallery from './components/Gallery';
 import './styles/App.css';
@@ -159,10 +158,9 @@ const App = () => {
       </Switch>
       <div className="container">
         <div className="header-container">
-          <Banner/>
-          <p className="sub-text">Collect a rare Kirby-Word NFT</p>
+          <Banner isLoading={isLoading} />
+          <p className="sub-text">Mint a Kirby-Word NFT</p>
           { currentAccount === "" ? renderNotConnectedContainer() : renderMintUI() }
-          <Hearts isLoading={isLoading}  />
           <h2 className="header gradient-text">{nftCount} / {TOTAL_MINT_COUNT} Minted</h2>
         </div>
         <Footer />
