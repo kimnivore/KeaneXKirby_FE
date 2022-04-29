@@ -1,13 +1,17 @@
 import React, { useEffect, useState } from "react";
-import { Route, Link, Switch } from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
 import { ethers } from 'ethers';
 import KeanesNFT from  './utils/KeanseNFT.json';
 import NavBar from "./components/NavBar";
+import Banner from './components/Banner';
 import Hearts from './components/Heart';
 import Footer from './components/Footer';
 import Gallery from './components/Gallery';
 import './styles/App.css';
 import { Button, notification, Popover } from 'antd';
+// import Banner from './assets/KeanesBanner.png';
+// import Kirby from './assets/Kirby16bit.png';
+
 const TOTAL_MINT_COUNT = 100;
 const CONTRACT_ADDRESS = '0x2ea8f9eacD5eF9211Abd58E54E483774F845BdDE';
 
@@ -58,7 +62,7 @@ const App = () => {
       }
 
       const accounts = await ethereum.request({ method: 'eth_requestAccounts' });
-      alert('Connected', accounts[0]);
+      console.log('Connected', accounts[0]);
       setCurrentAccount(accounts[0]);
       setupEventListener()
     } catch(error) {
@@ -155,7 +159,7 @@ const App = () => {
       </Switch>
       <div className="container">
         <div className="header-container">
-          <h1 className="header gradient-text">Keane x Kirby</h1>
+          <Banner/>
           <p className="sub-text">Collect a rare Kirby-Word NFT</p>
           { currentAccount === "" ? renderNotConnectedContainer() : renderMintUI() }
           <Hearts isLoading={isLoading}  />
@@ -163,6 +167,7 @@ const App = () => {
         </div>
         <Footer />
       </div>
+    
     </div>
   );
 };

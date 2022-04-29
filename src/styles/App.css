@@ -8,25 +8,6 @@
   text-align: center;
 }
 
-.Nav {
-  display: flex;
-  justify-content: flex-end;
-}
-
-.navlink{
-  margin: 20px;
-  font-weight: bold;
-  font-size: 1rem;
-  color:  #fae0e4;
-  text-decoration: none;
-}
-.navlink:hover {
-  color: #ff477e;
-}
-.navlink:focus {
-  color: #ff477e;
-  text-decoration: underline;
-}
 .container {
   height: 100%;
   background-color: #0d1116;
@@ -43,13 +24,14 @@
 
 .header {
   margin: 20px;
-  font-size: 3.5rem;
+  font-size: 2.5rem;
   font-weight: bold;
 }
 
 .sub-text {
-  font-size: 2rem;
+  font-size: 1.56rem;
   color: white;
+  margin: auto;
 }
 
 .gradient-text {
@@ -62,7 +44,7 @@
 .cta-button {
   height: 45px;
   border: 0;
-  margin: 50px auto;
+  margin: 30px auto;
   padding: 0 30px;
   border-radius: 5px;
   cursor: pointer;
@@ -77,6 +59,46 @@
   animation: gradient-animation 4s ease infinite;
 }
 
+.title {
+  display: flex;
+  align-items: center;
+  margin: 50px;
+  width: 90%;
+
+}
+
+.keane-art {
+  width: 35%;
+  height: auto;
+  display: flex;
+  margin: 0 40px;
+}
+
+.kirby-16bit {
+  width: 80%;
+  height: auto;  
+}
+
+/* Navbar.js */
+.Nav {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.navlink{
+  margin: 20px;
+  font-weight: bold;
+  font-size: 1.2rem;
+  color:  #fae0e4;
+  text-decoration: none;
+}
+.navlink:hover {
+  color: #ff477e;
+}
+.navlink:focus {
+  color: #ff477e;
+  text-decoration: underline;
+}
 /* Footer.js */
 
 .footer-container {
@@ -93,9 +115,14 @@
 }
 
 .footer-text {
-  color: white;
+  color:  #fae0e4;
   font-size: 1rem;
   font-weight: bold;
+  text-decoration: none;
+}
+.footer-text:hover {
+  color: #ff477e;
+  
 }
 
 /* Heart.js */
@@ -129,6 +156,7 @@
   width: 40%;
   height: auto;
   margin: auto;
+  margin: 20px auto;
   }
 
 /* KeyFrames */

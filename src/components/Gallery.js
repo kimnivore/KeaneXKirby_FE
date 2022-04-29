@@ -1,4 +1,4 @@
-import React, { Component, Fragment } from 'react';
+import React from 'react';
 import Fade from 'react-reveal/Fade';
 import '../styles/App.css';
 import { Card, Image, Tooltip } from 'antd';
@@ -11,13 +11,12 @@ const animateList = [
     { title: 'Kirby, I love you.', description: "Red crayon on blue construction paper", image: 'Kirby3' },
     { title: 'Kirby, take a picture of this.', description: "Red colored pencil on white construction paper", image: 'Kirby4' }
 ];
-export default class ReactReveal extends Component {
-    render() {
+export default function Gallery() {
         return (
-            <Fragment>
+            <div>
                 {animateList.map((item, key) => (
                     <Tooltip placement="right" color="#ff477e" title="scroll to view">
-                    <div className="block" key={key}>
+                    <div className="block" key={item.title}>
                         <Fade top>
                             <Card 
                                 hoverable
@@ -29,12 +28,12 @@ export default class ReactReveal extends Component {
                                     >
                                     <Meta title={item.title} description={item.description}/>
                             </Card>
-                        </Fade>   
+                        </Fade>  
                     </div>
-                    </Tooltip>
+                    </Tooltip> 
                  ))}
-            </Fragment>
+            </div>
         )
     }
-}
+
 
