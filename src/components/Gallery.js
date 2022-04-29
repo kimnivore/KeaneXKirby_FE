@@ -1,15 +1,15 @@
 import React, { Component, Fragment } from 'react';
 import Fade from 'react-reveal/Fade';
-// import Kirby1 from '../assets/IMG_3035.png';
-// import Kirby2 from '../assets/IMG_3036.jpg';
-// import Kirby3 from '../assets/IMG_3059.jpg';
-// import Kirby4 from '../assets/IMG_3060.jpg';
+import '../styles/App.css';
+import { Card, Image } from 'antd';
+
+const { Meta } = Card;
 
 const animateList = [ 
-    { title: 'Kirby1', image: 'Kirby1' },
-    { title: 'Kirby2', image: 'Kirby2' },
-    { title: 'Kirby3', image: 'Kirby3' },
-    { title: 'Kirby4', image: 'Kirby4' }
+    { title: 'Kirby, look at this.', description: "Black crayon on red construction paper", image: 'Kirby1' },
+    { title: 'Kirby, do not look at this.', description: "#2 pencil on pink construction paper", image: 'Kirby2' },
+    { title: 'Kirby, I love you.', description: "Red crayon on blue construction paper", image: 'Kirby3' },
+    { title: 'Kirby, take a picture of this.', description: "Red colored pencil on white construction paper", image: 'Kirby4' }
 ];
 
 export default class ReactReveal extends Component {
@@ -17,34 +17,22 @@ export default class ReactReveal extends Component {
         return (
             <Fragment>
                 {animateList.map((item, key) => (
-                    <div style={styles.block} key={key}>
+                    <div className="block" key={key}>
                         <Fade top>
-                            <img 
-                                style={styles.pic} 
-                                src={require('../assets/' + item.image + '.png') }
-                                alt={item.title}
-                            />
+                            <Card 
+                                hoverable
+                                className="pic"
+                                cover={
+                                    <Image 
+                                        src={require('../assets/' + item.image + '.png')}
+                                        alt={item.title}/>}
+                                    >
+                                    <Meta title={item.title} description={item.description}/>
+                            </Card>
                         </Fade>
                     </div>
                  ))}
             </Fragment>
         )
-    }
-}
-
-const styles = {
-    block: {
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center',
-        width: 'auto',
-        height: '100%',
-        background:'#000',
-        borderBottom: '1px solid rgba(255,255,255,.2)',
-    },
-    pic: {
-        width: '30%',
-        height: 'auto',
-        margin: '20px',
     }
 }
