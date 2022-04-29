@@ -250,7 +250,6 @@
     font-size: 1rem;
     margin: 10px;
   }
-
   .sub-text {
     font-size: 1rem;
   }
@@ -269,4 +268,18 @@
     width: 80%;
     height: auto;  
   }
+
+  .block {
+    width: 60%;
+    height: auto;
+    margin: auto;
+   
+    }
+  .pic {
+    width: auto;
+    height: auto;
+    margin: auto;
+    margin: 20px auto;
+  }
+  
 }
