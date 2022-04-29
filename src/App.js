@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { Route, Link, Switch } from 'react-router-dom';
 import { ethers } from 'ethers';
-import KeanesNFT from  './utils/KeanseNFT.json'
+import KeanesNFT from  './utils/KeanseNFT.json';
+import NavBar from "./components/NavBar";
 import Hearts from './components/Heart';
 import Footer from './components/Footer';
 import Gallery from './components/Gallery';
@@ -143,21 +144,15 @@ const App = () => {
         Mint NFT
       </Button>
     </Popover>
-  
   )
 
-  
   return (
     <div className="App">
-      <div className="Nav">
-        <Link className="navlink" to="/">Home</Link>
-        <Link className="navlink" to="/kirbies">Kirby Gallery</Link>
-      </div>
+      <NavBar/>
       <Switch>
         <Route path='/kirbies' component={Gallery} />
         <Route exact path='/' />
       </Switch>
-
       <div className="container">
         <div className="header-container">
           <h1 className="header gradient-text">Keane x Kirby</h1>

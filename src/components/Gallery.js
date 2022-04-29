@@ -11,13 +11,12 @@ const animateList = [
     { title: 'Kirby, I love you.', description: "Red crayon on blue construction paper", image: 'Kirby3' },
     { title: 'Kirby, take a picture of this.', description: "Red colored pencil on white construction paper", image: 'Kirby4' }
 ];
-
 export default class ReactReveal extends Component {
     render() {
         return (
             <Fragment>
                 {animateList.map((item, key) => (
-                    <Tooltip placement="right" title="scroll to view">
+                    <Tooltip placement="right" color="#ff477e" title="scroll to view">
                     <div className="block" key={key}>
                         <Fade top>
                             <Card 
@@ -30,7 +29,6 @@ export default class ReactReveal extends Component {
                                     >
                                     <Meta title={item.title} description={item.description}/>
                             </Card>
-                        
                         </Fade>   
                     </div>
                     </Tooltip>
@@ -39,3 +37,4 @@ export default class ReactReveal extends Component {
         )
     }
 }
+

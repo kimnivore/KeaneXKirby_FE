@@ -18,6 +18,14 @@
   font-weight: bold;
   font-size: 1rem;
   color:  #fae0e4;
+  text-decoration: none;
+}
+.navlink:hover {
+  color: #ff477e;
+}
+.navlink:focus {
+  color: #ff477e;
+  text-decoration: underline;
 }
 .container {
   height: 100%;
