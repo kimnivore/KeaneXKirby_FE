@@ -159,7 +159,7 @@ const App = () => {
       <div className="container">
         <div className="header-container">
           <Banner isLoading={isLoading} />
-          <p className="sub-text">Mint a Keane ❤️ Kirby NFT</p>
+          <p className="sub-text">Collect a Keane ❤️ Kirby NFT</p>
           { currentAccount === "" ? renderNotConnectedContainer() : renderMintUI() }
           <h2 className="header gradient-text">{nftCount} / {TOTAL_MINT_COUNT} Minted</h2>
         </div>
