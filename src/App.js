@@ -12,10 +12,10 @@ import { Button, notification, Popover } from 'antd';
 // import Kirby from './assets/Kirby16bit.png';
 
 const TOTAL_MINT_COUNT = 100;
-const CONTRACT_ADDRESS = '0x5FbDB2315678afecb367f032d93F642f64180aa3';
+const CONTRACT_ADDRESS = '0x2ea8f9eacD5eF9211Abd58E54E483774F845BdDE';
 
 
-const App = () => {
+function App() {
   const [currentAccount, setCurrentAccount] = useState('');
   const [nftCount, setNftCount] = useState('');
   const [isLoading, setIsLoading] = useState(false);
