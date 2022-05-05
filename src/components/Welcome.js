@@ -9,7 +9,7 @@ export default function Welcome() {
             </div>
             <div className='action'>    
                 <p>Check out our art gallery or mint a Kirby-themed NFT</p>
-                <p>NFT collection can be viewed on OpenSea testnet</p>
+                <p>Collection can be viewed on OpenSea testnet</p>
             </div>
         </>
     )

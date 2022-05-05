@@ -18,12 +18,6 @@
   justify-content: space-around;
   margin: 20px;
 }
-/* .header-container {
-  display: flex;
-  flex-direction: column;
-  margin: 20px;
-  /* padding: 30px; */
-
 
 .cta-button {
   height: 45px;
@@ -56,7 +50,7 @@
 .header {
   font-size: 3rem;
   font-weight: bold;
-  /* margin: 0 10px; */
+
 }
 .gradient-text {
   background: -webkit-linear-gradient(left, #fae0e4 30%, #ff477e 60%);
@@ -91,7 +85,8 @@
   margin: 10px auto;
   padding: 10px;
   height: auto;
-  background-image: linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.5)), url('../assets/kirby-30th-wallpaper.png');
+  background-image: url('../assets/kirby-30th-wallpaper.png');
+  opacity: 0.75;
   border-style: outset;
 }
 
