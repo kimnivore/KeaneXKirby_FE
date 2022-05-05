@@ -13,10 +13,9 @@ These instructions will get you a copy of the project running on your local mach
 
 ## Deployment
 ### Front End
-- [https://keanes-nft-collection.vercel.app/] (https://keanes-nft-collection.vercel.app/)
+- [https://keanes-nft-collection.vercel.app/](https://keanes-nft-collection.vercel.app/)
 ### Back End file
-- [https://github.com/kimnivore/KeanesNFT] (https://github.com/kimnivore/KeanesNFT)
-
+- [https://github.com/kimnivore/KeanesNFT](https://github.com/kimnivore/KeanesNFT)
 
 ## Built With
 - [React](https://reactjs.org/) - A JavaScript library for building user interfaces
@@ -29,11 +28,14 @@ These instructions will get you a copy of the project running on your local mach
 
 
 ## Author
-|                                     [**Kim Nguyen**](https://github.com/kimnivore)                                      | 
-|     [<img src="https://avatars.githubusercontent.com/u/91563653?v=4" width="80">](https://github.com/kimnivore)         | 
-|              [<img src="https://github.com/favicon.ico" width="15"> Github](https://github.com/kimnivore)               |
+|                                     [**Kim Nguyen**](https://github.com/kimnivore)                                    | 
+| :-------------------------------------------------------------------------------------------------------------------: | 
+|     [<img src="https://avatars.githubusercontent.com/u/91563653?v=4" width="80">](https://github.com/kimnivore)       | 
+|              [<img src="https://github.com/favicon.ico" width="15"> Github](https://github.com/kimnivore)             |
 | [ <img src="https://static.licdn.com/sc/h/al2o9zrvru7aqj8e1x2rzsrca" width="15"> LinkedIn](https://www.linkedin.com/in/kimnguyen79/)   |
 
 ## License
 
 This project is licensed under the MIT License
+
+
