@@ -5,7 +5,7 @@ import openseaLogo from '../assets/opensea-logo.svg';
 
 const TWITTER_HANDLE = 'kimnivore';
 const TWITTER_LINK = `https://twitter.com/${TWITTER_HANDLE}`;
-const OPENSEA_LINK = 'https://testnets.opensea.io/collection/keanexkirby-boae5bk4kt';
+const OPENSEA_LINK = 'https://testnets.opensea.io/collection/keanexkirby-l4xqeywrrt';
 // const CONTRACT_ADDRESS = '0x5FbDB2315678afecb367f032d93F642f64180aa3';
 // const OPENSEA_LINK = `http://testnets.opensea.io/assets/${CONTRACT_ADDRESS}`;
 

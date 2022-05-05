@@ -4,6 +4,7 @@ import { ethers } from 'ethers';
 import KeanesNFT from  './utils/KeanseNFT.json';
 import NavBar from "./components/NavBar";
 import Banner from './components/Banner';
+import Welcome from './components/Welcome';
 import Footer from './components/Footer';
 import Gallery from './components/Gallery';
 import './styles/App.css';
@@ -12,7 +13,7 @@ import { Button, notification, Popover } from 'antd';
 // import Kirby from './assets/Kirby16bit.png';
 
 const TOTAL_MINT_COUNT = 100;
-const CONTRACT_ADDRESS = '0x2ea8f9eacD5eF9211Abd58E54E483774F845BdDE';
+const CONTRACT_ADDRESS = '0xd48FE8c4692B93B111E04BE74A585F5c55680edf';
 
 
 function App() {
@@ -158,8 +159,9 @@ function App() {
       </Switch>
       <div className="container">
         <div className="header-container">
+          <Welcome />
           <Banner isLoading={isLoading} />
-          <p className="sub-text">Collect an NFT from the Keane x Kirby Collection</p>
+        
           { currentAccount === "" ? renderNotConnectedContainer() : renderMintUI() }
           <h2 className="header gradient-text">{nftCount} / {TOTAL_MINT_COUNT} Minted</h2>
         </div>

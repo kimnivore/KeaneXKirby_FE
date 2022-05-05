@@ -3,7 +3,8 @@
 
 /* App.js */
 .App {
-  height: 100vh;
+  position:absolute;
+  height: 100%;
   width: 100%;
   background-color: #0d1116;
   overflow: scroll;
@@ -17,28 +18,13 @@
   justify-content: space-around;
   margin: 20px;
 }
-.header-container {
+/* .header-container {
   display: flex;
   flex-direction: column;
   margin: 20px;
   /* padding: 30px; */
-}
-.header {
-  /* margin: 20px; */
-  font-size: 2.5rem;
-  font-weight: bold;
-}
-.sub-text {
-  font-size: 1.56rem;
-  color: white;
-  margin: 20px auto;
-}
-.gradient-text {
-  background: -webkit-linear-gradient(left, #fae0e4 30%, #ff477e 60%);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
+
+
 .cta-button {
   height: 45px;
   border: 0;
@@ -60,19 +46,30 @@
 
 .navbar {
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
   margin: 20px;
-  border-bottom: 1px solid #fae0e4;
-
+  border-bottom: 2px solid #ff477e;
+  height: 12vh;
+}
+.header {
+  font-size: 3rem;
+  font-weight: bold;
+  /* margin: 0 10px; */
+}
+.gradient-text {
+  background: -webkit-linear-gradient(left, #fae0e4 30%, #ff477e 60%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 .Nav {
   display: flex;
-  justify-content: flex-end;
-  /* background-image: linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.5)), url('../assets/kirby-30th-wallpaper.png'); */
-  background-size: 900px;
+  justify-content: center;
+
 }
 .navlink{
-  margin: 20px;
+  margin: 0 60px 250px 60px;
   font-weight: bold;
   font-size: 1.2rem;
   color:  #fae0e4;
@@ -84,6 +81,63 @@
 .navlink:focus {
   color: #ff477e;
   text-decoration: underline;
+}
+
+/* Welcome.js */
+
+.sub-text {
+  color: white;
+  margin: 20px auto;
+  padding: 50px;
+  height: auto;
+  background-image: linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.5)), url('../assets/kirby-30th-wallpaper.png');
+  border-style: outset;
+}
+
+h1{
+  font-family: 'Bubblegum Sans', cursive;
+  font-size: 3.5rem;
+  color: #0d1116;
+  margin: 20px auto;
+  font-weight: 700;
+  text-shadow: 1px 1px 1px #fae0e4,
+              1px 2px 1px #fae0e4,
+              1px 3px 1px #fae0e4,
+              1px 4px 1px #fae0e4,
+              1px 5px 1px #fae0e4,
+              1px 6px 1px #fae0e4,
+              1px 7px 1px #fae0e4,
+              1px 8px 1px #fae0e4,
+              1px 9px 1px #fae0e4,
+              1px 10px 1px #fae0e4,
+              1px 18px 6px rgba(16,16,16,0.4),
+              1px 22px 10px rgba(16,16,16,0.2),
+              1px 25px 35px rgba(16,16,16,0.2),
+              1px 30px 60px rgba(16,16,16,0.4);
+  
+}
+.action{
+  margin: 50px;
+}
+
+p{
+  font-family: 'Bubblegum Sans', cursive;
+  font-size: 1.5rem;
+  color: whitesmoke;
+  margin: 5px auto;
+  animation-duration: 3s;
+  animation-name: slidein;
+}
+@keyframes slidein {
+  from {
+    margin-left: 100%;
+    width: 300%;
+  }
+
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
 }
 
 /* Banner.js */
@@ -224,7 +278,7 @@
 /* Responsive Design */
 @media (max-width: 768px) {
   .header {
-    font-size: 2rem;
+    font-size: 2.5rem;
     margin: 10px;
   }
   .sub-text {
@@ -246,11 +300,12 @@
 
 @media (max-width: 390px) {
   .header {
-    font-size: 1rem;
+    font-size: 2rem;
     margin: 10px;
   }
   .sub-text {
     font-size: 1rem;
+    margin: 0;
   }
   .title {
     width: auto;
