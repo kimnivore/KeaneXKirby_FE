@@ -45,7 +45,7 @@
   margin: 20px;
   border-bottom: 2px solid #ff477e;
   height: 15%;
-  /* z-index: 1; */
+  z-index: 1;
 }
 .header {
   font-size: 3rem;
@@ -61,6 +61,7 @@
 .Nav {
   display: flex;
   justify-content: center;
+  margin-top: 20px;
 
 }
 .navlink{
@@ -85,13 +86,10 @@
   margin: 10px auto;
   padding: 10px;
   height: auto;
-  background-image: url('../assets/kirby-30th-wallpaper.png');
-  opacity: 0.75;
-  border-style: outset;
 }
 
 h1{
-  font-family: 'Bubblegum Sans', cursive;
+  /* font-family: 'Bubblegum Sans', cursive; */
   font-size: 3.5rem;
   color: #0d1116;
   margin: 20px auto;
@@ -117,7 +115,7 @@ h1{
 }
 
 p{
-  font-family: 'Bubblegum Sans', cursive;
+  /* font-family: 'Bubblegum Sans', cursive; */
   font-size: 1.5rem;
   color: whitesmoke;
   margin: 5px auto;
@@ -178,6 +176,13 @@ p{
   color: #ff477e; 
 }
 
+.bottom-banner {
+  background-image: linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.5)), url('../assets/kirby-30th-wallpaper.png');
+  background-size: 1000px;
+  border-style: outset;
+  height: 10vh;
+  width: 100%;
+}
 /* Heart.js */
 
 .heart {
