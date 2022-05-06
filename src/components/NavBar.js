@@ -9,7 +9,8 @@ export default function NavBar() {
       <Link className="header gradient-text" to='/'>Keane x Kirby Collection</Link>
       <div className="Nav">
           <Link className="navlink" to="/">Home</Link>
-          <Link className="navlink" to="/kirbies">Gallery</Link>
+          <Link className="navlink" to="/gallery">Gallery</Link>
+          <Link className="navlink" to="/game">Game</Link>
       </div>
     </div>
     )

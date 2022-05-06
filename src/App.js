@@ -154,7 +154,8 @@ function App() {
     <div className="App">
       <NavBar/>
       <Switch>
-        <Route path='/kirbies' component={Gallery} />
+        <Route path='/game'></Route>
+        <Route path='/gallery' component={Gallery} />
         <Route exact path='/' />
       </Switch>
       <div className="container"> 
