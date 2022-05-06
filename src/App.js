@@ -7,6 +7,7 @@ import Banner from './components/Banner';
 import Welcome from './components/Welcome';
 import Footer from './components/Footer';
 import Gallery from './components/Gallery';
+import Game from './components/Game/Game';
 import './styles/App.css';
 import { Button, notification, Popover } from 'antd';
 // import Banner from './assets/KeanesBanner.png';
@@ -152,13 +153,20 @@ function App() {
 
   return (
     <div className="App">
+
       <NavBar/>
+
+
       <Switch>
-        <Route path='/game'></Route>
-        <Route path='/gallery' component={Gallery} />
+        <Route exact path='/Game' component={Game}/>
+        <Route exact path='/Gallery' component={Gallery} />
         <Route exact path='/' />
       </Switch>
-      <div className="container"> 
+
+    
+
+     
+      <div className="container-app"> 
           <Welcome />
           <Banner isLoading={isLoading} />
           { currentAccount === "" ? renderNotConnectedContainer() : renderMintUI() }
