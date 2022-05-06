@@ -29,7 +29,7 @@ export default function Footer() {
                     >{`Created by @${TWITTER_HANDLE}`}</a>
                 
             </div>
-            <div className='bottom-banner'></div>
+            {/* <div className='bottom-banner'></div> */}
         </>
     )
 }

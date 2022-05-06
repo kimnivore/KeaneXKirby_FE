@@ -157,14 +157,11 @@ function App() {
         <Route path='/kirbies' component={Gallery} />
         <Route exact path='/' />
       </Switch>
-      <div className="container">
-        <div className="header-container">
+      <div className="container"> 
           <Welcome />
           <Banner isLoading={isLoading} />
-        
           { currentAccount === "" ? renderNotConnectedContainer() : renderMintUI() }
           <h2 className="header gradient-text">{nftCount} / {TOTAL_MINT_COUNT} Minted</h2>
-        </div>
         <Footer />
       </div>
     

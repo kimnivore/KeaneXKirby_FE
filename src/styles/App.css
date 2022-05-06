@@ -3,7 +3,6 @@
 
 /* App.js */
 .App {
-  position:absolute;
   height: 100%;
   width: 100%;
   background-color: #0d1116;
@@ -40,17 +39,18 @@
 
 .navbar {
   display: flex;
-  flex-direction: column;
   justify-content: space-between;
   margin: 20px;
   border-bottom: 2px solid #ff477e;
-  height: 15%;
+  height: 10vh;
+  position: relative;
+  width: 100%;
+  top: 0;
   z-index: 1;
 }
 .header {
   font-size: 3rem;
   font-weight: bold;
-
 }
 .gradient-text {
   background: -webkit-linear-gradient(left, #fae0e4 30%, #ff477e 60%);
@@ -61,11 +61,11 @@
 .Nav {
   display: flex;
   justify-content: center;
-  margin-top: 20px;
+  /* margin-top: 20px; */
 
 }
 .navlink{
-  margin: 0 60px 250px 60px;
+  margin: auto 60px;
   font-weight: bold;
   font-size: 1.2rem;
   color:  #fae0e4;
@@ -111,17 +111,21 @@ h1{
   
 }
 .action{
-  margin: 50px;
+  font-size: 1.5rem;
+  color: whitesmoke;
+  margin: 20px auto;
+  animation-duration: 3s;
+  animation-name: slidein;
 }
-
+/* 
 p{
-  /* font-family: 'Bubblegum Sans', cursive; */
+  font-family: 'Bubblegum Sans', cursive; 
   font-size: 1.5rem;
   color: whitesmoke;
   margin: 5px auto;
   animation-duration: 3s;
   animation-name: slidein;
-}
+} */
 @keyframes slidein {
   from {
     margin-left: 100%;
@@ -136,9 +140,10 @@ p{
 
 /* Banner.js */
 .title {
+  padding: 20px;
   display: flex;
   align-items: center;
-  margin: 50px;
+  margin: auto;
   width: 90%;
 }
 .keane-art {

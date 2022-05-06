@@ -8,8 +8,8 @@ export default function Welcome() {
                 <h1 >Welcome to the Keane x Kirby Collection</h1>
             </div> */}
             <div className='action'>    
-                <p>Check out our art gallery or mint a Kirby-themed NFT</p>
-                <p>Collection can be viewed on OpenSea testnet</p>
+                <p>Check out Keane's art gallery or ...</p>
+                <p> Mint a Kirby-themed NFT</p>
             </div>
         </>
     )
