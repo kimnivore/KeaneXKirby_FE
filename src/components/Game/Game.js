@@ -28,7 +28,6 @@ export default function Game() {
     }, []);
   
     function shuffleCards() {
-      //setCards(null)
       const shuffledCards = [...initialCards, ...initialCards]
         .sort(() => Math.random() - 0.5)
         .map((card) => ({ ...card, id: Math.random() }));
@@ -80,8 +79,7 @@ export default function Game() {
       }
     }, [choiceOne, choiceTwo]);
 
-    const handleRestart = () => {
-       
+    const handleRestart = () => { 
         setTurn(0);
         setChoiceOne(null);
         setChoiceTwo(null);
