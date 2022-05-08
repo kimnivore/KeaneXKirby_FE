@@ -44,12 +44,12 @@
   border-bottom: 2px solid #ff477e;
   height: 10vh;
   position: relative;
-  width: 100%;
+  width: auto;
   top: 0;
   z-index: 1;
 }
 .header {
-  font-size: 3rem;
+  font-size: 2.5rem;
   font-weight: bold;
 }
 .gradient-text {
@@ -291,7 +291,8 @@ h2{
     margin-top: 40px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-gap: 1em;
+    grid-gap: 1rem;
+  
 }
 
 .grid div img {
@@ -362,13 +363,12 @@ h2{
 
 /* Responsive Design */
 @media (max-width: 768px) {
-
   .header {
-    font-size: 2.5rem;
-    margin: 10px;
+    font-size: 2.2rem;
   }
-  .sub-text {
+  .navlink{
     font-size: 1.5rem;
+    margin: 10px;
   }
   .block {
     width: 60%;
@@ -385,8 +385,14 @@ h2{
 }
 
 @media (max-width: 390px) {
+  /* .navbar {
+    font-size: 1rem;
+  } */
   .header {
-    font-size: 1.5rem;
+    font-size: 1rem;
+  }
+  .navlink{
+    font-size: 0.8rem;
     margin: 10px;
   }
   h1{
@@ -429,5 +435,13 @@ h2{
     margin: auto;
     margin: 20px auto;
   }
+  .grid {
+    height: 300px;
+    width: 300px;
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 1rem;
+}
   
 }

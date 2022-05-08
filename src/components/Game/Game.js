@@ -109,7 +109,9 @@ export default function Game() {
           ))}
         </div>
         <div className='moves'>Moves: {turn}</div>
-        <Button className="cta-button connect-wallet-button" onClick={handleRestart}>Restart</Button>
+        <Button className="cta-button connect-wallet-button" onClick={handleRestart}>
+          Restart
+        </Button>
       </div>
     );
   }
