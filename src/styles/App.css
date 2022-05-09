@@ -363,6 +363,9 @@ h2{
 
 /* Responsive Design */
 @media (max-width: 768px) {
+  .navbar {
+    align-items: center;
+  }
   .header {
     font-size: 2.2rem;
   }
@@ -384,12 +387,13 @@ h2{
   }
 }
 
-@media (max-width: 390px) {
-  /* .navbar {
-    font-size: 1rem;
-  } */
+@media (max-width: 375px) {
+  .navbar {
+    align-items: center;
+  }
   .header {
     font-size: 1rem;
+    
   }
   .navlink{
     font-size: 0.8rem;
@@ -436,8 +440,8 @@ h2{
     margin: 20px auto;
   }
   .grid {
-    height: 300px;
-    width: 300px;
+    height: 350px;
+    width: 350px;
     margin-top: 20px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
