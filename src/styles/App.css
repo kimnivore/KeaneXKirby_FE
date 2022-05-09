@@ -197,15 +197,19 @@ h1{
 }
 
 /* Gallery */
-
+.gallery {
+  border-bottom: 1px solid rgba(255,255,255,.2);
+}
 .block {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: auto;
+  margin: auto;
+  width: 50%;
   height: 100%;
   background: #0d1116;
   border-bottom: 1px solid rgba(255,255,255,.2);
+
   }
 .pic {
   width: 40%;
@@ -273,6 +277,7 @@ h1{
     align-items: center;
     color:#fae0e4;
     font-size: 1.5rem;
+    border-bottom:  1px solid rgba(255,255,255,.2);
 }
 h2{
   color: #fae0e4;

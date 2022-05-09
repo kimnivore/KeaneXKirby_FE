@@ -14,7 +14,7 @@ const animateList = [
 ];
 export default function Gallery() {
         return (
-            <div>
+            <div className='gallery'>
                 {animateList.map((item, key) => (
                     <Tooltip placement="right" color="#ff477e" title="scroll to view">
                     <div className="block" key={item.title}>

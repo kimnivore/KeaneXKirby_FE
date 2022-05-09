@@ -153,18 +153,12 @@ function App() {
 
   return (
     <div className="App">
-
       <NavBar/>
-
-
       <Switch>
         <Route exact path='/Game' component={Game}/>
         <Route exact path='/Gallery' component={Gallery} />
         <Route exact path='/' />
       </Switch>
-
-    
-
      
       <div className="container-app"> 
           <Welcome />

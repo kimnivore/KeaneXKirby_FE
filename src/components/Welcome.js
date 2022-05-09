@@ -7,9 +7,10 @@ export default function Welcome() {
             {/* <div className="sub-text">
                 <h1 >Welcome to the Keane x Kirby Collection</h1>
             </div> */}
-            <div className='action'>    
-                <p>Check out Keane's art gallery or ...</p>
-                <p> Mint a Kirby-themed NFT</p>
+            <div className='action'> 
+                <p>Mint a Kirby-themed NFT</p>   
+                <p>Check out Keane's art gallery</p>
+                <p>Play a flip card game</p>
             </div>
         </>
     )
