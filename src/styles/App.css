@@ -40,17 +40,19 @@
 .navbar {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   margin: 20px;
   border-bottom: 2px solid #ff477e;
-  height: 10vh;
+  height: 15vh;
   position: relative;
   width: auto;
   top: 0;
   z-index: 1;
 }
 .header {
-  font-size: 2.5rem;
+  font-size: 2.1rem;
   font-weight: bold;
+
 }
 .gradient-text {
   background: -webkit-linear-gradient(left, #fae0e4 30%, #ff477e 60%);
@@ -281,7 +283,7 @@ h1{
 }
 h2{
   color: #fae0e4;
-  font-size: 2.5rem;
+  font-size: 2rem;
 
 }
 
@@ -296,7 +298,7 @@ h2{
     margin-top: 40px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-gap: 1rem;
+    grid-gap: 0.75rem;
   
 }
 
@@ -372,7 +374,7 @@ h2{
     align-items: center;
   }
   .header {
-    font-size: 2.2rem;
+    font-size: 1.8rem;
   }
   .navlink{
     font-size: 1.5rem;
