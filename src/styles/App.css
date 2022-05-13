@@ -144,6 +144,13 @@
 
 /* Home.js */
 
+.home-container{
+  padding: 50px 0;
+  animation-duration: 3s;
+  animation-name: slidein;
+  margin: auto;
+}
+
 h1{
   font-size: 3.5rem;
   color: #0d1116;
@@ -164,11 +171,6 @@ h1{
               1px 25px 35px rgba(16,16,16,0.2),
               1px 30px 60px rgba(16,16,16,0.4);
   
-}
-.home-container{
-  padding: 50px;
-  animation-duration: 3s;
-  animation-name: slidein;
 }
 
 @keyframes slidein {
@@ -208,8 +210,9 @@ h1{
 }
 /* Heart.js */
 
+
 .heart {
-  padding: 30px;
+  padding: 0;
   margin: auto;
   max-height: 30vh;
   max-width: 30vh;
@@ -418,7 +421,6 @@ h2{
   }
   .home-container {
     width: 100%;
-    margin: 50px;
   }
  
   .title {
