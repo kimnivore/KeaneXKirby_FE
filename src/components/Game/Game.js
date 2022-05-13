@@ -19,6 +19,7 @@ export default function Game() {
     const [choiceTwo, setChoiceTwo] = useState(null)
     const [disabled, setDisabled] = useState(true);
     const [startFlip, setStartFlip] = useState(true);
+   
   
     useEffect(() => {
       setTimeout(() => {
@@ -79,6 +80,8 @@ export default function Game() {
       }
     }, [choiceOne, choiceTwo]);
 
+    
+
     const handleRestart = () => { 
         setTurn(0);
         setChoiceOne(null);
@@ -91,12 +94,12 @@ export default function Game() {
   
     return (
       <div className='container'>
-        <h2>Play the Kirby & Frenemies</h2>
-        <h2>Flip Card Game</h2>
+        <h2>Kirby & Frenemies Flip Card Game</h2>
         <div> Select matching cards until the board is cleared</div>
         <Button onClick={shuffleCards} className='cta-button connect-wallet-button'>
             New Game
         </Button>
+        <div className='moves'>Moves: {turn}</div>
         <div className="grid">
           {cards.map(card => (
             <Card
@@ -109,10 +112,12 @@ export default function Game() {
             />
           ))}
         </div>
-        <div className='moves'>Moves: {turn}</div>
-        <Button className="cta-button connect-wallet-button" onClick={handleRestart}>
-          Restart
-        </Button>
+{/*         
+          <Button className="cta-button connect-wallet-button" onClick={handleRestart}>
+            Restart
+          </Button>
+    */}
+       
       </div>
     );
   }

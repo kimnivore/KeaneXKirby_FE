@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Route, Switch } from 'react-router-dom';
+import { Route, Switch, Routes } from 'react-router-dom';
 import { ethers } from 'ethers';
 import KeanesNFT from  './utils/KeanseNFT.json';
 import NavBar from "./components/NavBar";
@@ -154,11 +154,11 @@ function App() {
   return (
     <div className="App">
       <NavBar/>
-      <Switch>
-        <Route exact path='/Game' component={Game}/>
-        <Route exact path='/Gallery' component={Gallery} />
+      <Routes>
+        <Route path='/Game' element={<Game />}/>
+        <Route path='/Gallery' element={<Gallery />} />
         <Route exact path='/' />
-      </Switch>
+      </Routes>
      
       <div className="container-app"> 
           <Welcome />

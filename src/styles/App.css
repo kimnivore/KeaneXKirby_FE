@@ -41,7 +41,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 20px;
+  margin: auto 20px;
   border-bottom: 2px solid #ff477e;
   height: 15vh;
   position: relative;
@@ -224,23 +224,28 @@ h1{
   .card {
     position: relative;
     cursor: pointer;
-    /* box-shadow: 2px 2px 4px 4px #DEDEDE; */
-    /* width: 100%; */
-    /* height: 100% */
+    box-shadow: 2px 2px 4px 4px #DEDEDE;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    transform-style: preserve-3d;
+    background-color: white;
   }
-    /* img { 
-      width: 95%;
-      height: 95%;
-    } */
+    img { 
+      width: 50%;
+      height: 50%;
+    } 
   
     
     .card .front{
         background-color: white;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        margin: auto;
         border-radius: 5px;
-        border: 2px solid black;
+        border: 2px solid #DEDEDE;
         position: absolute;
         transform: rotateY(90deg);
         transition: all ease-in 0.2s;
@@ -257,9 +262,7 @@ h1{
     
     .card .back{
         background-color: white;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        margin: auto;
         border-radius: 5px;
         border: 2px solid white;
         transition: all ease-in 0.2s;
@@ -277,6 +280,7 @@ h1{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-color: #0d1116;
     color:#fae0e4;
     font-size: 1.5rem;
     border-bottom:  1px solid rgba(255,255,255,.2);
@@ -295,10 +299,16 @@ h2{
 .grid {
     height: 600px;
     width: 600px;
-    margin-top: 40px;
+    margin: auto;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-gap: 0.75rem;
+    border: 1px solid #dedede;
+    padding: 15px;
+    box-shadow: 0 0 5px 5px #DEDEDE;
+    perspective: 100%;
+    max-width: 1200px;
+    background-color: white;
   
 }
 
@@ -374,10 +384,10 @@ h2{
     align-items: center;
   }
   .header {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
   }
   .navlink{
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     margin: 10px;
   }
   .block {
