@@ -3,19 +3,21 @@
 
 /* App.js */
 .App {
-  height: 100%;
+  min-height: 100vh;
   width: 100%;
   background-color: #0d1116;
   overflow: scroll;
   text-align: center;
+  position: relative;
 }
 .container-app {
-  height: 100%;
+  height: 100vh;
   background-color: #0d1116;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  margin: 20px;
+  border: 1px solid red;
+  padding-bottom: 2.5rem;
 }
 
 .cta-button {
@@ -35,24 +37,56 @@
   animation: gradient-animation 4s ease infinite;
 }
 
+@-webkit-keyframes gradient-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+@-moz-keyframes gradient-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+@keyframes gradient-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
 /* Navbar.js */
 
 .navbar {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
-  margin: auto 20px;
+  margin: auto;
   border-bottom: 2px solid #ff477e;
   height: 15vh;
-  position: relative;
-  width: auto;
-  top: 0;
+  position: fixed;
+  width: 100%;
+  top: 0px;
   z-index: 1;
 }
 .header {
-  font-size: 2.1rem;
+  font-size: 2rem;
   font-weight: bold;
-
 }
 .gradient-text {
   background: -webkit-linear-gradient(left, #fae0e4 30%, #ff477e 60%);
@@ -63,11 +97,9 @@
 .Nav {
   display: flex;
   justify-content: center;
-  /* margin-top: 20px; */
-
 }
 .navlink{
-  margin: auto 60px;
+  margin: auto 40px;
   font-weight: bold;
   font-size: 1.2rem;
   color:  #fae0e4;
@@ -81,7 +113,42 @@
   text-decoration: underline;
 }
 
-/* Welcome.js */
+/* Footer.js */
+
+.footer-container {
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  width: 100%;
+  height: 3rem;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  z-index: 9999;
+}
+.twitter-logo, .opensea-logo {
+  width: 35px;
+  height: 35px;
+  margin: 5px;
+}
+.footer-text {
+  color:  #fae0e4;
+  font-size: 1rem;
+  font-weight: bold;
+  text-decoration: none;
+}
+.footer-text:hover {
+  color: #ff477e; 
+}
+
+/* .bottom-banner {
+  background-image: linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.5)), url('../assets/kirby-30th-wallpaper.png');
+  background-size: 1000px;
+  border-style: outset;
+  height: 10vh;
+  width: 100%;
+} */
+/* Home.js */
 
 .sub-text {
   color: white;
@@ -91,7 +158,6 @@
 }
 
 h1{
-  /* font-family: 'Bubblegum Sans', cursive; */
   font-size: 3.5rem;
   color: #0d1116;
   margin: 20px auto;
@@ -132,7 +198,6 @@ h1{
   }
 }
 
-/* Banner.js */
 .title {
   padding: 20px;
   display: flex;
@@ -151,45 +216,14 @@ h1{
   height: auto;  
 }
 
-/* Footer.js */
 
-.footer-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 0 30px;
-  margin-bottom: 100px;
-  position: relative;
-}
-.twitter-logo, .opensea-logo {
-  width: 35px;
-  height: 35px;
-  margin: 5px;
-}
-.footer-text {
-  color:  #fae0e4;
-  font-size: 1rem;
-  font-weight: bold;
-  text-decoration: none;
-}
-.footer-text:hover {
-  color: #ff477e; 
-}
-
-.bottom-banner {
-  background-image: linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.5)), url('../assets/kirby-30th-wallpaper.png');
-  background-size: 1000px;
-  border-style: outset;
-  height: 10vh;
-  width: 100%;
-}
 /* Heart.js */
 
 .heart {
   padding: 10px;
   margin: auto;
-  max-height: 20vh;
-  max-width: 10vh;
+  max-height: 30vh;
+  max-width: 30vh;
 }
 .heart[animation="0"] {
   animation: pulsate-bck 0.8s ease-in-out infinite both;
@@ -198,17 +232,41 @@ h1{
   animation: jello-horizontal 0.9s both;
 }
 
+@keyframes heartbeat {
+  from {
+    transform: scale(1);
+    transform-origin: center center;
+    animation-timing-function: ease-out;
+  }
+  10% {
+    transform: scale(0.5);
+    animation-timing-function: ease-in;
+  }
+  17% {
+    transform: scale(0.9);
+    animation-timing-function: ease-out;
+  }
+  33% {
+    transform: scale(0.5);
+    animation-timing-function: ease-in;
+  }
+  45% {
+    transform: scale(1);
+    animation-timing-function: ease-out;
+  }
+}
 /* Gallery */
 .gallery {
   border-bottom: 1px solid rgba(255,255,255,.2);
+  position: relative;
 }
 .block {
   display: flex;
   align-items: center;
   justify-content: center;
   margin: auto;
-  width: 50%;
-  height: 100%;
+  width: 60%;
+  height: auto;
   background: #0d1116;
   border-bottom: 1px solid rgba(255,255,255,.2);
 
@@ -320,63 +378,7 @@ h2{
 }
 /* KeyFrames */
 
-@-webkit-keyframes gradient-animation {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
-@-moz-keyframes gradient-animation {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
-@keyframes gradient-animation {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
 
-@keyframes heartbeat {
-  from {
-    transform: scale(1);
-    transform-origin: center center;
-    animation-timing-function: ease-out;
-  }
-  10% {
-    transform: scale(0.5);
-    animation-timing-function: ease-in;
-  }
-  17% {
-    transform: scale(0.9);
-    animation-timing-function: ease-out;
-  }
-  33% {
-    transform: scale(0.5);
-    animation-timing-function: ease-in;
-  }
-  45% {
-    transform: scale(1);
-    animation-timing-function: ease-out;
-  }
-}
 
 /* Responsive Design */
 @media (max-width: 768px) {

@@ -112,7 +112,7 @@ export default function Game() {
             />
           ))}
         </div>
-{/*         
+{/*      
           <Button className="cta-button connect-wallet-button" onClick={handleRestart}>
             Restart
           </Button>
