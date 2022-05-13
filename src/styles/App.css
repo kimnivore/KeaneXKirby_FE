@@ -375,24 +375,21 @@ h2{
     font-size: 1.5rem;
   }
   .navlink{
-    font-size: 1.3rem;
+    font-size: 1rem;
     margin: 10px;
   }
   .block {
-    width: 60%;
-    height: auto;
-    margin: auto;
-   
+    width: 80%;
+    margin: auto;  
     }
   .pic {
-    width: auto;
+    width: 80%;
     height: auto;
-    margin: auto;
     margin: 20px auto;
   }
 }
 
-@media (max-width: 375px) {
+@media (max-width: 540px) {
   .navbar {
     align-items: center;
   }
@@ -438,18 +435,6 @@ h2{
     height: auto;  
   }
 
-  .block {
-    width: 60%;
-    height: auto;
-    margin: auto;
-   
-    }
-  .pic {
-    width: auto;
-    height: auto;
-    margin: auto;
-    margin: 20px auto;
-  }
   .grid {
     height: 350px;
     width: 350px;
@@ -458,9 +443,9 @@ h2{
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-gap: 1rem;
 }
-.game-container{
-  font-size: 1rem;
-  padding: 10px 0 50px 0;
+  .game-container{
+    font-size: 1rem;
+    padding: 10px 0 50px 0;
 }
   
 }
