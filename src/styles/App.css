@@ -9,15 +9,8 @@
   overflow: scroll;
   text-align: center;
   position: relative;
-}
-.container-app {
-  height: 100vh;
-  background-color: #0d1116;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  border: 1px solid red;
-  padding-bottom: 2.5rem;
+  margin: 0;
+  padding: 0;
 }
 
 .cta-button {
@@ -79,7 +72,7 @@
   margin: auto;
   border-bottom: 2px solid #ff477e;
   height: 15vh;
-  position: fixed;
+  position: relative;
   width: 100%;
   top: 0px;
   z-index: 1;
@@ -115,7 +108,7 @@
 
 /* Footer.js */
 
-.footer-container {
+.footer-container { 
   position: absolute;
   bottom: 0;
   display: flex;
@@ -148,14 +141,8 @@
   height: 10vh;
   width: 100%;
 } */
-/* Home.js */
 
-.sub-text {
-  color: white;
-  margin: 10px auto;
-  padding: 10px;
-  height: auto;
-}
+/* Home.js */
 
 h1{
   font-size: 3.5rem;
@@ -178,10 +165,8 @@ h1{
               1px 30px 60px rgba(16,16,16,0.4);
   
 }
-.action{
-  font-size: 1.5rem;
-  color: whitesmoke;
-  margin: 20px auto;
+.home-container{
+  padding: 50px;
   animation-duration: 3s;
   animation-name: slidein;
 }
@@ -191,7 +176,6 @@ h1{
     margin-left: 100%;
     width: 300%;
   }
-
   to {
     margin-left: 0%;
     width: 100%;
@@ -216,11 +200,16 @@ h1{
   height: auto;  
 }
 
+/* NFT.js */
 
+.nft {
+  margin: auto;
+  padding: 50px;
+}
 /* Heart.js */
 
 .heart {
-  padding: 10px;
+  padding: 30px;
   margin: auto;
   max-height: 30vh;
   max-width: 30vh;
@@ -258,15 +247,12 @@ h1{
 /* Gallery */
 .gallery {
   border-bottom: 1px solid rgba(255,255,255,.2);
-  position: relative;
+  padding: 50px;
 }
 .block {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: auto;
-  width: 60%;
-  height: auto;
   background: #0d1116;
   border-bottom: 1px solid rgba(255,255,255,.2);
 
@@ -294,8 +280,8 @@ h1{
     background-color: white;
   }
     img { 
-      width: 50%;
-      height: 50%;
+      width: 60%;
+      height: 60%;
     } 
   
     
@@ -333,23 +319,23 @@ h1{
     }
   
   /* Game.js */
-  .container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: #0d1116;
-    color:#fae0e4;
-    font-size: 1.5rem;
-    border-bottom:  1px solid rgba(255,255,255,.2);
+.game-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #0d1116;
+  color:#fae0e4;
+  font-size: 1.2rem;
+  padding: 50px 0;
+  border-bottom: 1px solid rgba(255,255,255,.2);
 }
 h2{
   color: #fae0e4;
-  font-size: 2rem;
-
+  font-size: 1.8rem;
 }
 
-.container button:hover {
+.game-container button:hover {
     filter: brightness(0.7);
     cursor: pointer;
 }
@@ -357,17 +343,15 @@ h2{
 .grid {
     height: 600px;
     width: 600px;
-    margin: auto;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-gap: 0.75rem;
+    grid-gap: 1rem;
     border: 1px solid #dedede;
-    padding: 15px;
+    padding: 10px;
     box-shadow: 0 0 5px 5px #DEDEDE;
     perspective: 100%;
     max-width: 1200px;
     background-color: white;
-  
 }
 
 .grid div img {
@@ -421,13 +405,20 @@ h2{
   h1{
     font-size: 1.5rem;
   }
+  h2{
+    font-size: 1.2rem;
+  }
   p{
     font-size: 1rem;
     width: 100%;
   }
-  .action {
+
+  .footer-text {
+    font-size: 0.8rem;
+  }
+  .home-container {
     width: 100%;
-    margin: 20px auto;
+    margin: 50px;
   }
  
   .title {
@@ -465,6 +456,10 @@ h2{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-gap: 1rem;
+}
+.game-container{
+  font-size: 1rem;
+  padding: 10px 0 50px 0;
 }
   
 }

@@ -93,9 +93,9 @@ export default function Game() {
     }
   
     return (
-      <div className='container'>
+      <div className='game-container'>
         <h2>Kirby & Frenemies Flip Card Game</h2>
-        <div> Select matching cards until the board is cleared</div>
+        <div> Select matching cards until the board is complete</div>
         <Button onClick={shuffleCards} className='cta-button connect-wallet-button'>
             New Game
         </Button>

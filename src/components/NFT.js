@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import { ethers } from 'ethers';
 import KeanesNFT from  '../utils/KeanesNFT.json';
-import Footer from './Footer';
+import Heart from './Heart';
 import '../styles/App.css';
 import { Button, notification, Popover } from 'antd';
 
@@ -146,11 +146,12 @@ export default function NFT() {
 
     return (
       <>
-      <div >
+      <div className='nft' >
+      <h2>Mint a Kirby-word NFT</h2>
+      <Heart isLoading={isLoading}/>
         { currentAccount === "" ? renderNotConnectedContainer() : renderMintUI() }
         <h2 className="header gradient-text">{nftCount} / {TOTAL_MINT_COUNT} Minted</h2>
       </div>
-       <Footer />
        </>
         
     )

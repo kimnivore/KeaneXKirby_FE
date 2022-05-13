@@ -4,9 +4,8 @@ import { Route, Routes } from 'react-router-dom';
 // import KeanesNFT from  './utils/KeanseNFT.json';
 import NavBar from "./components/NavBar";
 import Home from './components/Home';
-// import Welcome from './components/Welcome';
 import NFT from './components/NFT';
-// import Footer from './components/Footer';
+import Footer from './components/Footer';
 import Gallery from './components/Gallery';
 import Game from './components/Game/Game';
 import './styles/App.css';
@@ -155,7 +154,7 @@ function App() {
   return (
     <div className="App">
       <NavBar/>
-      <div className="container-app">
+      <div >
         <Routes>
           <Route path='NFT' element={<NFT />} />
           <Route path='Game' element={<Game />} />
@@ -163,7 +162,7 @@ function App() {
           <Route path='/' element={<Home isLoading={isLoading}/>} />
         </Routes>
       </div>
-     
+      <Footer />
     </div>
   );
 };
