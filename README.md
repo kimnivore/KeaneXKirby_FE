@@ -1,6 +1,6 @@
 # Keane x Kirby NFT Collection
 
-This is an application that will allow users to mint a unique Keane x Kirby related NFT and view a gallery of Kirby related art. 
+This is an application that will allow users to mint a unique Keane x Kirby related NFT, view a gallery of Kirby related art, and play a Kirby and Frenemies Flip Card game. 
 
 ![Keane Chalk Art](https://github.com/kimnivore/keanes_nft_fe/blob/main/src/assets/KeanesArt.png?raw=true)
 
