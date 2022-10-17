@@ -44,6 +44,14 @@ export default function NFT() {
       } else {
         console.log('No authorized account found');
       }
+
+      let chainId = await ethereum.request({ method: 'eth_chainId' });
+      console.log("Connected to chain " + chainId);
+
+      const goerliChainId = "0x5"; 
+      if (chainId !== goerliChainId) {
+	      alert("You are not connected to the Goerli Test Network!"); 
+      }
     }
   
     const connectWallet = async () => {
@@ -62,6 +70,8 @@ export default function NFT() {
         console.log(error);
       }
       }
+
+  
   
     const setupEventListener = async () => {
       try {
