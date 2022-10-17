@@ -6,7 +6,7 @@ import '../styles/App.css';
 import { Button, notification, Popover } from 'antd';
 
 const TOTAL_MINT_COUNT = 100;
-const CONTRACT_ADDRESS = '0xd48FE8c4692B93B111E04BE74A585F5c55680edf';
+const CONTRACT_ADDRESS = '0x2D37532fc36Ca6c38DD983eDe9266F300D5226F5';
 
 export default function NFT() {
 
@@ -94,12 +94,15 @@ export default function NFT() {
           console.log('Popping wallet to pay gas...');
           let nftTxn = await connectedContract.makeAnEpicNFT();
           setIsLoading(true)
+
           console.log('Mining...please wait.');
           await nftTxn.wait();
           setIsLoading(false)
+
           console.log(nftTxn);
-          console.log(`Mined, see transaction: https://rinkeby.etherscan.io/tx/${nftTxn.hash}`);
+          console.log(`Mined, see transaction: https://goerli.etherscan.io/tx/${nftTxn.hash}`);
           openNotification()
+
         } else {
           console.log("Ethereum object doesn't exist!");
         }
