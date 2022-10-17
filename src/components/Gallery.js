@@ -11,6 +11,7 @@ const animateList = [
     { title: 'Kirby, I love you', description: "Red crayon on blue construction paper", image: 'Kirby3' },
     { title: 'Kirby, take a picture of this', description: "Red colored pencil on white construction paper", image: 'Kirby4' },
     { title: 'I ❤️ Kirby so much', description: "Black marker on post-it note with Avery Label #8160", image: 'Kirby5'},
+    { title: 'Rainbow Kirby!', description: "Rainbow marker on legal sized printer paper", image: 'Kirby6'},
 ];
 export default function Gallery() {
         return (
