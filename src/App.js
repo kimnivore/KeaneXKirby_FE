@@ -1,7 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { Route, Routes } from 'react-router-dom';
-// import { ethers } from 'ethers';
-// import KeanesNFT from  './utils/KeanseNFT.json';
 import NavBar from "./components/NavBar";
 import Home from './components/Home';
 import NFT from './components/NFT';
