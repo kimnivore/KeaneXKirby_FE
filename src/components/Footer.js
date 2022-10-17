@@ -4,7 +4,7 @@ import openseaLogo from '../assets/opensea-logo.svg';
 
 const TWITTER_HANDLE = 'kimnivore';
 const TWITTER_LINK = `https://twitter.com/${TWITTER_HANDLE}`;
-const OPENSEA_LINK = 'https://testnets.opensea.io/collection/keanexkirby-l4xqeywrrt';
+const OPENSEA_LINK = 'https://testnets.opensea.io/collection/keanexkirby-bpema8iz72';
 
 
 export default function Footer() {
